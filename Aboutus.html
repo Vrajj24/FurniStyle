@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FurniStyle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-image: url(bg.jpg);
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        background-position: center; 
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+        header {
+            background-color: #81523F;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .brand h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .about {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .about h2 {
+            margin-bottom: 30px;
+            font-size: 34px;
+            color: #333;
+        }
+        .about p {
+            color: #666;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff9505;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .contact-btn:hover {
+            background-color: #B86B00;
+        }
+        footer {
+            background-color: #81523F;
+            color: black;
+            text-align: center;
+            padding: 40px;
+            border-top: 2px solid #ddd;
+        }
+        @media screen and (max-width: 770px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="signup.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <div class="brand">
+            <h1>FurniStyle</h1>
+        </div>
+    </header>
+    <main class="main">
+        <section class="about">
+            <h2>WHO WE ARE</h2>
+            <p>Welcome to FurniStyle, where we believe that every piece of furniture tells a story. Our journey began with a simple idea: to bring quality, style, and comfort to homes around the world. We are passionate about creating furniture that not only looks great but also stands the test of time.</p>
+            <p>Our team of skilled craftsmen and designers work tirelessly to bring you collections that reflect both timeless classics and contemporary trends. Whether you're looking for a cozy sofa, a stylish dining table, or a functional cabinet, we have something for every taste and budget.</p>
+            <p>At FurniStyle, we are committed to sustainability and use eco-friendly materials wherever possible. We believe in responsible sourcing and take great care to ensure that our products are made with respect for both people and the planet.</p>
+            <p>Thank you for choosing FurniStyle. We are honored to be a part of your home and look forward to helping you create spaces that you love.</p>
+            <a href="ContactUS.html" class="contact-btn">Contact Us</a>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 FurniStyle. All rights reserved.
+    </footer>
+</body>
+</html>

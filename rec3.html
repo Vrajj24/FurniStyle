@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniStyle</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden; 
+        }
+        header {
+            background-color: #81523F;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .brand h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px; 
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            width: 100%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; 
+        }
+        .rec-image {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 20px; 
+        }
+        .rec-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .rec-info {
+            flex: 1;
+            max-width: 50%; 
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .rec-info h2 {
+            color: #423115; 
+            margin-bottom: 10px;
+        }
+        .rec-info p {
+            color: #423115;
+            font-size: 18px;
+            line-height: 1.6; 
+        }
+        .rec-info .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        footer p, footer nav {
+            margin-bottom: 10px;
+        }
+        footer nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column; 
+            }
+            .rec-image,
+            .rec-info {
+                max-width: 100%; 
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>FurniStyle</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="rec-image">
+            <img src="rec3.webp" alt="Ochre Royale Recliner">
+        </div>
+        <div class="rec-info">
+            <h2>Ochre Royale Recliner</h2>
+            <p>"Embrace opulence with our Ochre Royale Recliner, a statement piece blending luxury and comfort. Upholstered in sumptuous ochre fabric, it adds a touch of sophistication to any room. This recliner features lavish cushioning throughout, offering unparalleled support for relaxation. Its ergonomic design includes adjustable positions, ensuring personalized comfort for every moment. Crafted with premium materials and a robust frame, it promises durability and long-lasting quality. Perfect for both lounging and adding elegance to your decor, the Ochre Royale Recliner is an essential choice for luxurious living spaces."</p>
+            <p class="price">$1550</p>
+            <p><strong>Dimensions:</strong> 36"W x 38"D x 36"H</p>
+            <p><strong>Material:</strong> Crafted with premium upholstered fabric.</p>
+            <p><strong>Color:</strong> Ochre</p>
+            <p><strong>Features:</strong> Plush comfort, adjustable, ergonomic, relaxation essential.</p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2024 FurniStyle. All rights reserved.</p>
+            <nav>
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+            <p>Follow us:
+                <a href="#" style="color: black;">Facebook</a>,
+                <a href="#" style="color: black;">Twitter</a>,
+                <a href="#" style="color: black;">Instagram</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

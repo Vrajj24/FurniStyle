@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recliners - FurniStyle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+        header {
+            background-color: #81523F;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .brand h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px; 
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .recs {
+            text-align: center;
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .rec-item {
+            border: 1px solid #ddd;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .rec-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .rec-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .rec-info {
+            padding: 10px;
+            text-align: center;
+        }
+        .rec-info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .rec-info p {
+            color: #666;
+            font-size: 18px;
+        }
+        .recs h2 {
+            color: #423115; 
+        }
+        @media screen and (max-width: 768px) {
+            .rec-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        footer {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        footer p, footer nav {
+            margin-bottom: 10px;
+        }
+        footer nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>RECLINERS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="recs">
+            <h2>"Sink into relaxation with plush, ergonomic design."</h2>
+            <div class="rec-grid">
+                <div class="rec-item" onclick="openRecDetail('rec1.html')">
+                    <img src="rec.jpg" alt="Berry Bliss Recliner">
+                    <div class="rec-info">
+                        <h3>Berry Bliss Recliner</h3>
+                    </div>
+                </div>
+                <div class="rec-item" onclick="openRecDetail('rec2.html')">
+                    <img src="rec2.webp" alt="Slate Comfort Recliner">
+                    <div class="rec-info">
+                        <h3>Slate Comfort Recliner</h3>
+                    </div>
+                </div>
+                <div class="rec-item" onclick="openRecDetail('rec3.html')">
+                    <img src="rec3.webp" alt="Ochre Royale Recliner">
+                    <div class="rec-info">
+                        <h3>Ochre Royale Recliner</h3>
+                    </div>
+                </div>
+                <div class="rec-item" onclick="openRecDetail('rec4.html')">
+                    <img src="rec4.webp" alt="Grey Cloud Recliner">  
+                    <div class="rec-info">
+                        <h3>Grey Cloud Recliner</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2024 FurniStyle. All rights reserved.</p>
+            <nav>
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+            <p>Follow us:
+                <a href="#" style="color: black;">Facebook</a>,
+                <a href="#" style="color: black;">Twitter</a>,
+                <a href="#" style="color: black;">Instagram</a>
+            </p>
+        </div>
+    </footer>
+    <script>
+        function openRecDetail(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniStyle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #81523F;  
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 0;
+        }
+        .brand {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .brand h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .logo {
+            width: 100px;
+            height: 80px;
+        }
+        
+        .navbar-section {
+            background-color: rgba(238, 224, 208);
+            padding: 10px 20px;
+            margin-top: -15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+        .search-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;    
+        }
+        .search-input {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .extra-icons{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+        .extra-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .hero {
+            background: url('background.png') no-repeat center center/cover;
+            height: 400px;
+            text-align: left;
+            color: black;
+            padding-top: 150px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            margin-left: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            margin-left: 10px;
+        }
+        .hero .btn {
+            background: #243010;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+        .hero .btn:hover {
+            background: #645327;
+        }
+        .trendy-products {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .trendy-products h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #655356;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .product-info {
+            padding: 10px;
+            text-align: center;
+        }
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-info p {
+            color: #fff;
+            font-size: 18px;
+        }
+        .furniture {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .furniture h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #655356;
+        }
+        .furniture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .furniture-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .furniture-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .furniture-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .furniture-info {
+            padding: 10px;
+            text-align: center;
+        }
+        .furniture-info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .furniture-info p {
+            color: #fff;
+            font-size: 18px;
+        }
+        .reviews {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .reviews h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #655356;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .review-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(238, 224, 208);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+        .review-item h3 {
+            margin-bottom: 10px;
+            color: black;
+            font-size: 18px;
+        }
+        .review-item p {
+            color: black;
+            font-size: 16px;
+        }
+        @media screen and (max-width: 768px) {
+            .product-grid,
+            .furniture-grid {
+                grid-template-columns: 1fr;
+            }
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .navbar-section {
+                justify-content: center;
+            }
+        }
+        footer {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        footer p, footer nav {
+            margin-bottom: 10px;
+        }
+        footer nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="signup.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="ContactUS.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="brand">
+            <h1>FurniStyle</h1>
+        </div>
+        <img src="logo2.png" alt="Logo" class="logo">
+    </header>
+    <main class="main">
+        <section class="navbar-section">    
+            <div class="extra-icons">
+                <img src="google-plus.png" alt="Icon 1">
+                <img src="instagram.svg" alt="Icon 2">
+                <img src="heart.png" alt="Icon 3">
+            </div>
+            <div class="search-container">
+                <img src="search.png" alt="Search" class="search-icon" onclick="toggleSearchInput()">
+                <input type="text" id="search-input" class="search-input" placeholder="Search...">
+            </div>
+        </section>
+        <section class="hero">
+            <h1>Welcome to FurniStyle</h1>
+            <p>Discover a wide range of furniture that blends style with comfort.</p>
+            <a href="Aboutus.html" class="btn">Learn More</a>
+        </section>
+        <section class="trendy-products">
+            <h2> Our Popular Products</h2>
+            <div class="product-grid">
+                <div class="product-item" onclick="openProductDetail('rec3.html')">
+                    <img src="rec3.webp" alt="Ochre Royale Recliner">
+                    <div class="product-info">
+                        <h3>Ochre Royale Recliner</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('sofa3.html')">
+                    <img src="sofa.jpg" alt="Classic Elegance Sofa">
+                    <div class="product-info">
+                        <h3>Classic Elegance Sofa</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('din2.html')">
+                    <img src="dt2.jpg" alt="Black Pearl Round Table Set">
+                    <div class="product-info">
+                        <h3>Black Pearl Round Table Set</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('stand2.html')">
+                    <img src="st2.webp" alt="Brown Wood Nightstand">
+                    <div class="product-info">
+                        <h3>Brown Wood Nightstand</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('bed4.html')">
+                    <img src="bed4.avif" alt="Silver Lining Bed">
+                    <div class="product-info">
+                        <h3>Silver Lining Bed</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('chair3.html')">
+                    <img src="third.jpg" alt="Snowfall Chair">
+                    <div class="product-info">
+                        <h3>Snowfall Chair</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('chair2.html')">
+                    <img src="option.jpg" alt="Blue Fog Chair">
+                    <div class="product-info">
+                        <h3>Blue Fog Chair</h3>
+                    </div>
+                </div>
+                <div class="product-item" onclick="openProductDetail('bed1.html')">
+                    <img src="bed.jpg" alt="Latte Dream Bed">
+                    <div class="product-info">
+                        <h3>Latte Dream Bed</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="furniture">
+            <h2>What Are You Looking For?</h2>
+            <div class="furniture-grid">
+                <div class="furniture-item" onclick="openFurnitureDetail('Sofas.html')">
+                    <img src="sofa.jpg" alt="Sofas">
+                    <div class="furniture-info">
+                        <h3>Sofas</h3>
+                    </div>
+                </div>
+                <div class="furniture-item" onclick="openFurnitureDetail('Chairs.html')">
+                    <img src="chair.jpg" alt="Chairs">
+                    <div class="furniture-info">
+                        <h3>Chairs</h3>
+                    </div>
+                </div>
+                <div class="furniture-item" onclick="openFurnitureDetail('Beds.html')">
+                    <img src="bed.jpg" alt="Beds">
+                    <div class="furniture-info">
+                        <h3>Beds</h3>
+                    </div>
+                </div>
+                <div class="furniture-item" onclick="openFurnitureDetail('Nightstands.html')">
+                    <img src="nightstand.jpg" alt="Nightstands">
+                    <div class="furniture-info">
+                        <h3>Nightstands</h3>
+                    </div>
+                </div>
+                <div class="furniture-item" onclick="openFurnitureDetail('Recliners.html')">
+                    <img src="rec.jpg" alt="Recliners">
+                    <div class="furniture-info">
+                        <h3>Recliners</h3>
+                    </div>
+                </div>
+                <div class="furniture-item" onclick="openFurnitureDetail('Dining.html')">
+                    <img src="dt3.jpg" alt="Dining Tables">
+                    <div class="furniture-info">
+                        <h3>Dining Tables</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-grid">
+                <div class="review-item">
+                    <h3>Jane Doe</h3>
+                    <p>Amazing furniture! The quality is top-notch and the service was excellent.</p>
+                    <p>Will definitely shop here again. Highly recommend FurniStyle!</p>
+                </div>
+                <div class="review-item">
+                    <h3>John Smith</h3>
+                    <p>The sofa I bought is extremely comfortable and stylish. Perfect for my living room.</p>
+                    <p>The delivery was fast and hassle-free. Great experience overall.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Emily Johnson</h3>
+                    <p>Purchased a dining table set and it looks fantastic. Very sturdy and elegant.</p>
+                    <p>Customer support was very helpful in guiding me through the purchase process.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Michael Brown</h3>
+                    <p>Love the nightstand I got from FurniStyle. Matches perfectly with my bedroom decor.</p>
+                    <p>Good value for money. Will be back for more furniture soon.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Sarah Wilson</h3>
+                    <p>Received my recliner last week, and it's been amazing. Super comfortable and stylish.</p>
+                    <p>Appreciate the prompt delivery and excellent customer service.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FurniStyle. All rights reserved.</p>
+        <nav>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="ContactUS.html">Contact Us</a>
+        </nav>
+    </footer>
+    <script>
+        function toggleSearchInput() {
+            const searchInput = document.getElementById('search-input');
+            if (searchInput.style.display === 'block') {
+                searchInput.style.display = 'none';
+            } else {
+                searchInput.style.display = 'block';
+                searchInput.focus();
+            }
+        }
+
+        function openProductDetail(page) {
+            window.location.href = page;
+        }
+
+        function openFurnitureDetail(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

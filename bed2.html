@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniStyle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #81523F;
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px;
+            flex: 1;
+        }
+        .stand-image {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 20px;
+        }
+        .stand-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .stand-info {
+            flex: 1;
+            max-width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .stand-info h2 {
+            color: #423115;
+            margin-bottom: 10px;
+        }
+        .stand-info p {
+            color: #423115;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .stand-info .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        footer p, footer nav {
+            margin-bottom: 10px;
+        }
+        footer nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .stand-image,
+            .stand-info {
+                max-width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>FurniStyle</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="stand-image">
+            <img src="first.webp" alt="Vanilla Mocha Bed">
+        </div>
+        <div class="stand-info">
+            <h2>Vanilla Mocha Bed</h2>
+            <p>The Vanilla Mocha Bed epitomizes contemporary elegance with its seamless fusion of vanilla-colored upholstery and rich mocha accents. Crafted from high-quality materials, this bed exudes luxury and durability, ensuring a stylish addition to any bedroom decor. Its sturdy frame provides robust support, while the plush padding offers exceptional comfort for restful nights. Ideal for those seeking both aesthetic appeal and practicality, the bed's refined design and neutral tones effortlessly complement various interior styles. Elevate your bedroom ambiance with the Vanilla Mocha Bed, where sophistication meets comfort in a harmonious blend of modernity and timeless charm.</p>
+            <p class="price">$710</p>
+            <p><strong>Dimensions:</strong> Full (54" W x 75" L x 48" H), Queen (60" W x 80" L x 48" H)</p>
+            <p><strong>Material:</strong>  Hardwood frame with premium soft-touch fabric.</p>
+            <p><strong>Color:</strong> White & Mocha</p>
+            <p><strong>Features:</strong> Plush headboard, modern design, easy assembly, durable construction.</p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2024 FurniStyle. All rights reserved.</p>
+            <nav>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a>
+            </nav>
+            <p>Follow us:
+                <a href="#" style="color: black;">Facebook</a>,
+                <a href="#" style="color: black;">Twitter</a>,
+                <a href="#" style="color: black;">Instagram</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
